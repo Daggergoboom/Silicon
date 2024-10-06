@@ -694,13 +694,17 @@ ul {
   }
 
 
+  .carousel-item:first-of-type,
+  .carousel-item:last-of-type {
+    display: none;
+  }
   
-  @media (width < 768px) {
-    
+  @media (width > 768px) {
     .carousel-item:first-of-type,
     .carousel-item:last-of-type {
-      display: none;
+      display: block;
     }
+    
     
 
     
@@ -717,10 +721,11 @@ ul {
       display: block;
     }
    
-    @media (width < 1200px) {
-/*       .text-tablet {
+    @media (width > 1200px) {
+  
+      .text-tablet {
         display: none;
-      } */
+      } 
     
       .text-desktop {
         display: block;
@@ -767,12 +772,16 @@ ul {
   }
 
 
-  
+  .move-right {
+    padding-left: 6rem;
+  }
+
   .text-content {
     max-width: 500px;
     margin-left: -1.2rem;
     
   }
+  
   
   
   /* Styling the list with icons */
@@ -862,6 +871,13 @@ ul {
     text-align: left;
     /* Ensure text starts from the left */
   }
+  
+  .feature-2 {
+   position: relative;
+    left: 6rem;
+      
+    }
+  
   
   .feature img {
     width: 60px;
