@@ -923,19 +923,26 @@ ul {
   /* Centers horizontally */
   align-items: center;
   /* Centers vertically */
-  padding: 4rem;
+/*   padding: 4rem; */
+  padding-top: 6.5rem;
+  padding-bottom: 6.5rem;
   background-color: var(--clr-gray-100);
 
+  .container {
+    display: grid;
+    grid-template-columns: 30% 1fr;
+  }
   
   .heading {
     text-align: left;
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     /* Adjust size if needed */
     color: var(--clr-text-heading);
     font-weight: 800;
-    padding: 1rem 0;
+    /* padding: 1rem 0; */
     /* Adjust padding to create space without shifting the section */
     margin: 0;
+    margin-top: -2rem;
     /* Reset the margins */
   }
   
@@ -948,7 +955,7 @@ ul {
   
   .testi-container {
     display: flex;
-    gap: 1.25rem;
+    gap: 5rem;
     flex-wrap: nowrap;
     justify-content: center;
     /* Center the testimonial cards horizontally */
@@ -967,6 +974,7 @@ ul {
     display: flex;
     flex-direction: column;
     gap: 15px;
+    transform: scale(1.15);
   }
   
   .quote-icon img {
@@ -1060,21 +1068,29 @@ ul {
 
   
   .faq-accordion {
+    border: 1px solid var(--clr-gray-300);
+    border-radius: .5rem;
+    
 
-
+    
     .faq {
+      --_padding: 1.3rem;
+
       .question {
-        border-radius: 10px;
-        padding: 0.5rem;
-        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+        border-bottom: 1px solid var(--clr-gray-300);
+        padding: calc(var(--_padding) * 0.7);
         display: flex;
         justify-content: space-between;
         align-items: center;
         cursor: pointer;
         font-size: 1rem;
-        padding: .2rem;
         margin: 0;
 
+        h2 {
+          /* margin-left: 1rem; */
+          margin-right: 1.5rem;
+        }
+        
         .faq-down-btn {
           display: flex;
           width: 40px;
@@ -1088,18 +1104,29 @@ ul {
           border: 0;
           cursor: pointer;
           transition: transform 0.5s ease-in;
+          
         }
         
         .faq-down-btn i {
           transition: transform 0.3s ease;
         }
       }
+      
+      
       .answer {
+        border-bottom: 1px solid var(--clr-gray-300);
         max-height: 0;
         overflow: hidden;
         transition: max-height 0.3s ease-out;
         font-size: 0.875rem;
         color: var(#585C7B);
+        padding-left: var(--_padding);
+        padding-right: var(--_padding);
+        
+        p {
+          margin-top: 1rem;
+          margin-bottom: 1.5rem;
+        }
         
       }
     }
@@ -1138,7 +1165,35 @@ ul {
       padding-bottom: 1.5rem;
     }
       
+    .faq-accordion {
+      border: none;
+      
+      .faq {
+        margin-bottom: 1rem;
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.08);
+        border-radius: .8rem;
+        
+        .question {
+          border: none;
+
+          
+
+        }
+        .answer {
+          max-height: 0;
+          overflow: hidden;
+          transition: max-height 0.3s ease-out;
+          font-size: 0.875rem;
+          color: var(#585C7B);
+          
+        }
+      }
   
+      .faq.active .answer {
+        max-height: 1000px;
+        transition: max-height 0.3s ease-in-out;
+      }
+    }
 
 
     .contact-container {
@@ -1198,7 +1253,7 @@ ul {
     grid-template-columns: 40% 1fr;
     gap: 6rem;
     padding-top: 4.5rem;
-    margin-bottom: 11rem;
+    margin-bottom: 5rem;
     /* padding-bottom: 11rem; */
     text-align: left;
 
@@ -1249,8 +1304,10 @@ ul {
     padding-bottom: 3rem;
     padding-top: 4rem;
     
-
-
+    
+  }
+  .d-text {
+    display: none;
   }
   
   .sub-bell {
@@ -1320,7 +1377,7 @@ ul {
       padding-right: 1rem;
     }
     .subscribe-form {
-      margin-bottom: 1rem;
+      margin-bottom: 1.5rem;
       
     }
 
@@ -1332,6 +1389,17 @@ ul {
       padding: 1rem 1rem 1rem 2.5rem;
     }
   }
+  @media (min-width: 1200px) {
+  
+    .d-text {
+      display: block;
+    }
+    .input-field {
+      padding: 1rem 5rem 1rem 2.5rem;
+    }
+  }
+  
+  
 }
   /* SUBSCRIBE END */
   
@@ -1347,6 +1415,11 @@ ul {
   text-align:  center;
 }
 
+@media (width > 768px) {
+  .breaker {
+  display: none;
+}
+}
 /* FOOTER END */
 
   /* Animations */
