@@ -685,8 +685,9 @@ ul {
 
 .carousel-section {
   padding-block: var(--section-spacing);
-  /* background-color: var(--clr-bg-100);               */
+  background-color: var(--clr-bg-100);  
   text-align: center;
+  
 
   .carousel {
     display: flex;
@@ -1031,11 +1032,20 @@ ul {
   
 .faq-section {
     
-display: grid;
-grid-template-columns: 1fr;
-    
+  display: grid;
+  grid-template-columns: 1fr;
+  padding-top: 3rem;
+
   .faq-window {
     max-width: auto;
+
+    .faq-headline {
+    padding-bottom: 1rem;
+    }
+
+    .faq-mobile-subtext {
+      padding-bottom: 3rem;
+    }
   }
   
 
@@ -1155,68 +1165,101 @@ grid-template-columns: 1fr;
    }
   
   
-@media (width > 768px) {
-  
-  .contact-container {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 1.5rem;
-    padding-top: 2rem;
-    padding-bottom: 2rem;
+  @media (width > 768px) {
     
-
-    
+    .faq-headline {
+      padding-bottom: 1.5rem;
+    }
+      
   
-    .contact-card {
-      
-      padding: 1.5rem;
-      background-color: transparent;
-      border: 2px solid var(--clr-gray-200);
-      border-radius: 0.8rem;
-      text-align: left;
 
-      img {
-        width: 28px;
-        height: auto;
-        margin-bottom: 1rem;
-      }
+
+    .contact-container {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.5rem;
+      padding-top: 2rem;
+      padding-bottom: 2rem;
       
-      p {
-        line-height: 4;
-        margin-top: -1rem;
-              }
-      a {
-        font-weight: 600;
-        text-decoration: none;
+
+      
+    
+      .contact-card {
+        
+        padding: 1.5rem;
+        background-color: transparent;
+        border: 2px solid var(--clr-gray-200);
+        border-radius: 0.8rem;
+        text-align: left;
+
+        img {
+          width: 28px;
+          height: auto;
+          margin-bottom: 1rem;
+        }
+        
+        p {
+          line-height: 4;
+          margin-top: -1rem;
+                }
+        a {
+          font-weight: 600;
+          text-decoration: none;
+          
+        }
+        #t-blue { 
+          color: var(--clr-primary);
+        }
+        #t-green { 
+          color: var(--clr-success);
+        }
+
         
       }
-      #t-blue { 
-        color: var(--clr-primary);
-      }
-      #t-green { 
-        color: var(--clr-success);
-      }
-
-      
     }
+    .contact {
+      display: none;
+    }
+    
   }
-  .contact {
-    display: none;
+
+  @media (width > 992px) {
+    
   }
-  
-}
 
-@media (width > 992px) {
-  
-}
+  @media (width > 1200px) {
+    grid-template-columns: 40% 1fr;
+    gap: 6rem;
+    padding-top: 4.5rem;
+    padding-bottom: 11rem;
+    text-align: left;
 
-@media (width > 1200px) {
- grid-template-columns: repeat(2, 1fr);
+    
+    .faq-window {
+      grid-area: 1 / 1;
+
+      .faq-headline, 
+      .faq-mobile-subtext {
+        text-align: left;
+      
+      }
+        
+    }
+    .contact-container {
+      grid-area: 1 / 1;
+      position: relative;
+      top: 9.5rem;
+      gap: 1rem;
+      max-width: 93%;
+
+      .contact-card {
+        max-height: 10rem;
+      }
+    }
+
+  }
 
 
-}
-
-.
 }
 
 /* FAQ END */
