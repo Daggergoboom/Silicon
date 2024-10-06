@@ -1019,7 +1019,7 @@ ul {
   
 .faq-section {
     
-   display: none;
+   /* display: none; */
     
   .faq-window {
     max-width: auto;
@@ -1104,68 +1104,70 @@ ul {
     transition: transform 0.3s ease;
   }
   
-  @media (min-width: 768px) {
-    
-    .faq-section {
-      padding: .3rem;
-      background-color: transparent;
-      box-shadow: none;
-      
-      
-      
-    }
-    
-    .contact {
- /*      display: none; */
-    }
-    .contact-grid {
-      display: block;
-    }
-    
-    .faq-headline {
-      text-align: center;
-      font-weight: extra-bold;
-      font-size: 1.6rem;
-    }
-    
-    .faq-mobile-subtext {
-      color: var(#585C7B);
-      font-size: 1.1rem;
-      text-align: center;
-    }
-    
-    .question {
-      font-size: 1rem;
-      padding: .2rem;
-      margin: 0;
-    }
-    
-    .btn-contact {
-      display: block;
-      padding: 3rem;
-      justify-items: center;
-      margin: 0 auto;
-      width: 70%;
-      height: auto;
-      
-    }
-    
-
-  }
   
-  @media (width > 992px) {
+  .faq-section {
+    padding: .3rem;
+    background-color: transparent;
+    box-shadow: none;
+    
+    
     
   }
   
-  @media (width > 1200px) {
+  .contact {
+    /*      display: none; */
+  }
+  .contact-grid {
+    display: block;
+  }
+  
+  .faq-headline {
+    text-align: center;
+    font-weight: extra-bold;
+    font-size: 1.6rem;
+  }
+  
+  .faq-mobile-subtext {
+    color: var(#585C7B);
+    font-size: 1.1rem;
+    text-align: center;
+  }
+  
+  .question {
+    font-size: 1rem;
+    padding: .2rem;
+    margin: 0;
+  }
+  
+  .btn-contact {
+    display: block;
+    padding: 3rem;
+    justify-items: center;
+    margin: 0 auto;
+    width: 70%;
+    height: auto;
     
+  }
+  
+@media (width > 768px) {
+  .contact {
+    display: none;
   }
 }
+
+@media (width > 992px) {
   
-  /* FAQ END */
+}
+
+@media (width > 1200px) {
   
-  /* SUBSCRIBE START */
-  
+}
+}
+
+/* FAQ END */
+
+/* SUBSCRIBE START */
+
 .subscribe-section {
   
   .subscribe {
