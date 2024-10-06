@@ -332,7 +332,7 @@
       </div>
     </section>
 
-    <section aria-label="FAQ" class="faq-section">
+    <section aria-label="FAQ" class="faq-section container">
 
       <div class=faq-window>
         <h2 class="faq-headline">Any questions? Check out the FAQs</h2>
@@ -430,48 +430,36 @@
         </div>
       </div>
 
-      <div class="contact-grid">
 
-        <div class="contact-card">
-          <div class="contact-container">
-            <img src="./images/icons/phone-icon.svg" alt="" />
-          </div>
-          <div class="space-y-1">
-            <p>
-              Still have questions?
-              <a href="Contact Us">Contact us</a>
-            </p>
-          </div>
-        </div>
-        
-
-        <div class="contact-card">
-          <div class="contact-container">
-            <img src="./images/icons/whatsapp-icon.svg" alt="" />
-          </div>
-          <div class="space-y-1">
-            <p>
-              Don't like questions?
-              <a href="Contact Us">Contact us</a>
-            </p>
-          </div>
-        </div>
+      <div class="contact-container s14">
+        <button class="contact-card">
+          <img src="./images/icons/phone-icon.svg" />
+          <p>  Still have questions? </p>
+          <a id="t-blue" class="sb" href="#">Contact us <i class="fa-solid fa-arrow-right"></i></a> 
+        </button>
+      
+        <button class="contact-card">
+          <img src="./images/icons/whatsapp-icon.svg" />
+          <p> Don't like questions? </p>
+          <a id="t-green" class="sb" href="#">Contact us <i class="fa-solid fa-arrow-right"></i></a>
+        </button>
       </div>
+
 
       <div class="contact">
         <div class="container">
-          <a href="#" class="btn-contact">
-            <img src="./images/icons/contact-us-now.svg" alt="Contact us now">
-          </a>
+          <button class="btn btn-primary">
+            <label> Contact us now</label>
+          </button>
         </div>       
       </div>
     </section>
 
 
-    <section aria-label="subscribe-section" class="subscribe-section">
+    <section aria-label="subscribe-section" class="subscribe-section container">
 
       <div class="subscribe">
-          <div class="container">
+  <!--         <div class="container"> -->
           <div class="sub-bell">
             <img src="./images/icons/subscribe-bell.svg" alt="Subscribe bell" class="bell">
             <h2 class="subscribe-text">Subscribe to our newsletter</h2>
@@ -480,7 +468,7 @@
             <input class="input-field" type="email" placeholder="Your email" />
             <button class="btn-subscribe">Subscribe</button>
           </div>
-        </div>
+       <!--  </div> -->
       </div>
 
     </section>

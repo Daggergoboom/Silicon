@@ -12,6 +12,7 @@
   --clr-gray-900: #0b0f19;
 
   --clr-primary: #6366f1;
+  --clr-success: #22C55E;
 
   --clr-bg: #fff;
 
@@ -188,6 +189,17 @@ ul {
   font-weight: 800;
 }
 
+.s14 {
+  font-size: 0.9rem;
+  line-height: 1.6;
+  font-weight: 400;
+  }
+
+.sb {
+  font-weight: 600;
+  }
+
+  
 .text-lg {
   font-size: 1.125rem;
   color: var(--clr-gray-600)
@@ -1025,12 +1037,7 @@ ul {
     max-width: auto;
   }
   
-  .contact-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 2rem;
-    margin-top: 4rem;
-  }
+
   
   .question {
     border-radius: 10px;
@@ -1039,21 +1046,13 @@ ul {
     
   }
   
-  .contact-grid {
-    display: none;
-  }
+
 
   .contact {
     display: block;
   }
   
-  .contact-card {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    padding: 2rem;
-    border-radius: 10px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-  }
+
   
   .contact-container {
     display: flex;
@@ -1114,12 +1113,8 @@ ul {
     
   }
   
-  .contact {
-    /*      display: none; */
-  }
-  .contact-grid {
-    display: block;
-  }
+
+  
   
   .faq-headline {
     text-align: center;
@@ -1139,20 +1134,75 @@ ul {
     margin: 0;
   }
   
-  .btn-contact {
-    display: block;
-    padding: 3rem;
-    justify-items: center;
-    margin: 0 auto;
-    width: 70%;
-    height: auto;
-    
+  .contact-container {
+    display: none;
+ 
   }
+   .contact {
+     .container {
+      display: grid;
+      grid-template-columns: 1fr;
+      justify-items: center;
+      padding-top: 4rem;
+      padding-bottom: 3rem;
+      
+      .btn {
+        padding: .8rem 1.8rem;
+
+      }
+    }
+   }
+  
   
 @media (width > 768px) {
+  
+  .contact-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    
+
+    
+  
+    .contact-card {
+      
+      padding: 1.5rem;
+      background-color: transparent;
+      border: 2px solid var(--clr-gray-200);
+      border-radius: 0.8rem;
+      text-align: left;
+
+      img {
+        width: 28px;
+        height: auto;
+        margin-bottom: 1rem;
+      }
+      
+      p {
+        line-height: 4;
+        margin-top: -1rem;
+              }
+      a {
+        font-weight: 600;
+        text-decoration: none;
+        
+      }
+      #t-blue { 
+        color: var(--clr-primary);
+      }
+      #t-green { 
+        color: var(--clr-success);
+      }
+
+      
+    }
+  }
   .contact {
     display: none;
   }
+  
 }
 
 @media (width > 992px) {
@@ -1172,18 +1222,18 @@ ul {
   
   .subscribe {
     background-color: var(--clr-logo-bg);
-    margin: 1rem;
     border-radius: 0.7rem;
     justify-items: center;
     align-items: center;
     
+    display: grid;  
+    grid-template-columns: 1fr;
+    padding-bottom: 3rem;
+    padding-top: 4rem;
+    
+
     .container {
       
-      display: grid;  
-      grid-template-columns: 1fr;
-      padding-bottom: 3rem;
-      padding-top: 4rem;
-      margin-bottom: 1rem;
     }
   }
   
@@ -1210,8 +1260,9 @@ ul {
     border: 1px solid var(--clr-gray-400);
     border-radius: .8rem .8rem .8rem .8rem;
     overflow: hidden;
-    max-height: 4rem;
+
     align-items: center;
+    background-color: white;
   }
   
   .btn-subscribe {
@@ -1230,9 +1281,10 @@ ul {
   
   .input-field {
     flex: 1;
-    padding: .5rem .5rem .5rem 2.5rem;
+    padding: 1rem 6rem 1rem 2.5rem;
     width: 80%;
     height: 100%;
+    max-height: 4rem;
     background: url('/images/icons/mail.svg') no-repeat 10px center;
     background-color: #fff;
     border: none;
@@ -1243,17 +1295,24 @@ ul {
     .subscribe {
       
       
-      .container {
-        grid-template-columns: 1fr 1fr;
-        padding-top: 3.5rem;
-        padding-bottom: 2rem;
-      }
+      grid-template-columns: 1fr 1fr;
+      padding-top: 3.5rem;
+      padding-bottom: 2rem;
     }
     .subscribe-form {
       margin-top: 2rem;
       /* margin-right: 1rem; */
       margin-bottom: 3rem;
+      padding-right: 1rem;
       
+    }
+
+    .sub-bell {
+     padding-left: 1rem;
+    }
+
+    .input-field {
+      padding: 1rem 1rem 1rem 2.5rem;
     }
   }
 }
