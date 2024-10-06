@@ -882,7 +882,7 @@ ul {
 
 .testimonials-section {
   display: flex;
-  justify-content: center;
+   justify-content: center;
   /* Centers horizontally */
   align-items: center;
   /* Centers vertically */
@@ -982,9 +982,8 @@ ul {
   }
   
   @media (width < 1200px) {
-    .testimonials {
-      display: none;
-    }
+    display: none;
+    
   }
 }
   
@@ -994,7 +993,7 @@ ul {
   
 .faq-section {
     
-    /*   display: none; */
+   display: none;
     
   .faq-window {
     max-width: auto;
@@ -1142,12 +1141,22 @@ ul {
   /* SUBSCRIBE START */
   
 .subscribe-section {
-  display: none;  
-
-  .Subscribe {
+  
+  .subscribe {
     background-color: var(--clr-logo-bg);
-    padding: 2rem;
-    margin-bottom: 1rem;
+    margin: 1rem;
+    border-radius: 0.7rem;
+    justify-items: center;
+    align-items: center;
+    
+    .container {
+      
+      display: grid;  
+      grid-template-columns: 1fr;
+      padding-bottom: 3rem;
+      padding-top: 4rem;
+      margin-bottom: 1rem;
+    }
   }
   
   .sub-bell {
@@ -1170,25 +1179,54 @@ ul {
   
   .subscribe-form {
     display: flex;
-    
+    border: 1px solid var(--clr-gray-400);
+    border-radius: .8rem .8rem .8rem .8rem;
+    overflow: hidden;
+    max-height: 4rem;
+    align-items: center;
   }
   
   .btn-subscribe {
     background-color: #6366F1;
     color: white;
-    padding: 1.2rem;
-    border-bottom-right-radius: 10px;
-    border-top-right-radius: 10px;
+    padding: 1rem;
+    padding-right: 1.5rem;
+    padding-left: 1.5rem;
+    border: none;
+    border-radius: 0 .8rem .8rem 0;
+    height: 100%;
+    
     
     
   }
   
   .input-field {
     flex: 1;
-    padding: 10px 10px 10px 40px;
+    padding: .5rem .5rem .5rem 2.5rem;
     width: 80%;
+    height: 100%;
     background: url('/images/icons/mail.svg') no-repeat 10px center;
+    background-color: #fff;
+    border: none;
+  
     
+  }
+  @media (min-width: 768px) {
+    .subscribe {
+      
+      
+      .container {
+        grid-template-columns: 1fr 1fr;
+        padding-top: 3.5rem;
+        padding-bottom: 2rem;
+      }
+    }
+    .subscribe-form {
+      margin-top: 2rem;
+      /* margin-right: 1rem; */
+      margin-bottom: 3rem;
+      
+    }
   }
 }
   /* SUBSCRIBE END */
