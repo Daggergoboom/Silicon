@@ -1,6 +1,24 @@
 const menuBtn = document.querySelector('.menu-btn')
 const mainMenu = document.querySelector('#main-menu')
 
+
+  /* Joakim: find the switch */
+const swi = document.querySelector('#darkmode-switch')
+
+
+  /* Joakim: add the 'click' eventlistner */
+swi.addEventListener('click', (evt) => {
+
+  // based on the events target (ie the) swithes checked status. remove the old theme and add the new
+  if (!evt.target.checked) {
+    document.body.classList.add('lightTheme')
+    document.body.classList.remove('darkTheme')
+  } else {
+    document.body.classList.add('darkTheme')
+    document.body.classList.remove('lightTheme')
+  }
+})
+
 menuBtn.addEventListener('click', () => {
     const isExpanded = menuBtn.getAttribute('aria-expanded') === 'true' 
 
