@@ -681,20 +681,19 @@ ul {
     justify-content: space-evenly;
 
   }
-
-  .text-desktop {
-    max-width: 70ch;
-    margin-inline: auto;
-    display: none;
+  .text-mobile {
+    display: block;
   }
 
   .text-tablet {
     display: none;
   }
 
-  .text-mobile {
-    display: block;
+  .text-desktop {
+    display: none;
   }
+
+
   
   @media (width < 768px) {
     
@@ -719,16 +718,18 @@ ul {
     }
    
     @media (width < 1200px) {
+/*       .text-tablet {
+        display: none;
+      } */
     
       .text-desktop {
         display: block;
+        max-width: 70ch;
+        margin-inline: auto;
       }
     
 
     
-      .text-tablet {
-        display: none;
-      }
     
       .tablet-subtext {
         color: var(#585C7B);
